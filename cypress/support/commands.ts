@@ -36,6 +36,10 @@
 //   }
 // }
 
+import '@bahmutov/cy-api';
+
+chai.use(require('chai-things'));
+
 Cypress.Commands.add('login', function(email, password, rememberMe) {
   cy.visit('auth/login');
 
